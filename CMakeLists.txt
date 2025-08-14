@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(pir-driver C)
+add_executable(pir-driver src/pir_driver.c)
+target_compile_features(pir-driver PRIVATE c_std_99)
+target_compile_options(pir-driver PRIVATE -O2 -Wall)
+install(TARGETS pir-driver RUNTIME DESTINATION bin)
